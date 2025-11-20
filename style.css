@@ -8,6 +8,7 @@ body {
 }
 
 .grid-container {
+    margin: 50px;
     display: grid;
     grid-template-areas:
         'header'
@@ -17,7 +18,7 @@ body {
         'facts'
         'footer';
     background-color: white;
-    gap: 50px;
+    gap: 100px;
 }
 
 .header {
@@ -38,6 +39,8 @@ body {
 .image {
     width: 25%;
     height: auto;
+    animation: mover 1s linear infinite;
+    /* spin 0.5s linear infinite; */
 }
 
 .nav {
@@ -63,6 +66,12 @@ body {
     animation: spin 3s linear infinite;
 }
 
+.animgif {
+    max-width: 20%;
+    height: auto;
+    animation: spin 2s linear infinite alternate;
+}
+
 /* keep hover/active from touching transform so rotation continues */
 .navhoe:hover {
     filter: brightness(1.05);
@@ -82,4 +91,78 @@ body {
     to {
         transform: rotate(360deg);
     }
+}
+
+.movehoe {
+    transform: translate(500px, 10px);
+    animation: spin 5s linear infinite;
+}
+
+p {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    display: inline-block;
+    transform-origin: center;
+    /* moving (float) + rainbow background animation (two animations) */
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 3s linear var(--color-delay, 0s) infinite,
+        spin 5s linear var(--move-delay, 0s) infinite;
+}
+
+.epic .letter {
+    display: inline-block;
+    transform-origin: center;
+    /* moving (float) + rainbow background animation (two animations) */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: black;
+    font-size: 50px;
+    animation: float 1.1s ease-in-out var(--move-delay, 0s) infinite alternate;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(1500px, 0px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
 }
