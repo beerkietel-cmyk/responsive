@@ -55,23 +55,31 @@ body {
     height: auto;
 }
 
+/* ...existing code... */
 .navhoe {
     max-width: 5%;
     height: auto;
-    transform: rotate(0deg);
-    transition: transform 0.5s;
+    transform-origin: center;
+    animation: spin 3s linear infinite;
 }
 
+/* keep hover/active from touching transform so rotation continues */
 .navhoe:hover {
-    transform: scale(-20%);
-    transition: transform 0.5s;
+    filter: brightness(1.05);
+    cursor: pointer;
 }
 
 .navhoe:active {
-    transform: rotate(-20deg);
-    transition: transform 0.1s;
+    filter: brightness(0.95);
 }
 
-link:focus {
-    transform: scale(50%);
+/* continuous rotation keyframes */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
