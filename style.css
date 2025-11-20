@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'nav'
+        'menu'
+        'main'
+        'facts'
+        'footer';
+    background-color: white;
+    gap: 50px;
+}
+
+.header {
+    grid-area: header;
+    background-color: firebrick;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.content {
+    grid-area: main;
+    padding: 50px;
+    background-color: aquamarine;
+}
+
+.image {
+    width: 25%;
+    height: auto;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.gif {
+    /* display: block; */
+    /* margin: 5px auto; */
+    max-width: 20%;
+    height: auto;
+}
+
+.navhoe {
+    max-width: 5%;
+    height: auto;
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+
+.navhoe:hover {
+    transform: scale(-20%);
+    transition: transform 0.5s;
+}
+
+.navhoe:active {
+    transform: rotate(-20deg);
+    transition: transform 0.1s;
+}
+
+link:focus {
+    transform: scale(50%);
+}
