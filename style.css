@@ -283,3 +283,7 @@ p {
         transform: rotate(360deg);
     }
 }
+
+.cutemoji {
+    cursor: pointer;
+}

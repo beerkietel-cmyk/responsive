@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="resources/emoji2.png" />
+    <title>Hoofdpagina</title>
 </head>
 <body>
     <div class="grid-container">
@@ -112,7 +113,32 @@
         <div class="footer">
             <p>footer</p>
             <br>
-            <img class="movehoe" src="resources/emoji1.png" alt="emoji">
+            <img class="cutemoji" src="resources/emoji1.png" alt="emoji">
+            <script>
+                (function () {
+                    const sigma = document.querySelector('.cutemoji');
+                    if (!sigma) return;
+
+                    // make element keyboard focusable for accessibility
+                    sigma.setAttribute('tabindex', '0');
+                    sigma.setAttribute('role', 'button');
+
+                    function go() {
+                    // change to the page you want
+                    window.location.href = '/pages/page3/page3.html';
+                    }
+
+                    sigma.addEventListener('click', go);
+
+                    // allow Enter and Space to activate the "button"
+                    sigma.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                        e.preventDefault();
+                        go();
+                    }
+                    });
+                })();
+            </script>
         </div>
     </div>
 </body>
