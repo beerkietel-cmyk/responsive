@@ -14,7 +14,6 @@
                 <span class="letter">T</span>
                 <span class="letter">o</span>
                 <span class="letter">p</span>
-                <span class="letter">ㅤ</span>
                 <span class="letter">h</span>
                 <span class="letter">e</span>
                 <span class="letter">a</span>
@@ -22,34 +21,50 @@
                 <span class="letter">e</span>
                 <span class="letter">r</span>
             </span>
+            <img src="resources/emoji2.png" alt="" width="50px">
         </div>
         <div class="nav">
             <p>This is the navigation bar.</p>
             <br>
             <p>
-                <a class="link" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a> |
-                <a class="link" href="https://www.bing.com" target="_blank" rel="noopener noreferrer">Bing</a> |
-                <a class="link" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">youtube</a> |
+                <a class="linkmo" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a> |
+                <a class="linkmo" href="https://www.bing.com" target="_blank" rel="noopener noreferrer">Bing</a> |
+                <a class="linkmo" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">youtube</a> |
+                <a class="linkmo" href="/pages/page2/Otherpage.html" target="_blank" rel="noopener noreferrer">Otherpage</a> |
             </p>
-            <br>
-            <img class="navhoe" src="hoe.png" alt="">
-            <img class="navhoe" src="hoe.png" alt="">
-            <img class="navhoe" src="hoe.png" alt="">
-            <img class="navhoe" src="hoe.png" alt="">
-            <img class="navhoe" src="hoe.png" alt="">
-            <img class="navhoe" src="hoe.png" alt="">
-            
         </div>
         <div class="menu">
             <ul>
-                <li>Home</li>
-                <li>FaQ</li>
+                <li>
+                    <span class="menu" aria-label="menu">
+                        <span class="letter">M</span>
+                        <span class="letter">e</span>
+                        <span class="letter">n</span>
+                        <span class="letter">u</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="menu" aria-label="menu">
+                        <span class="letter">F</span>
+                        <span class="letter">a</span>
+                        <span class="letter">Q</span>
+                    </span>
+                </li>
             </ul>
+            <br>
+            <img class="navhoe" src="resources/roaring-angry-beast-blue-emoji-black.png" alt="">
+            <img class="navhoe" src="resources/hoe.png" alt="">
+            <img class="navhoe" src="resources/hoe.png" alt="">
+            <img class="navhoe" src="resources/hoe.png" alt="">
+            <img class="navhoe" src="resources/hoe.png" alt="">
+            <img class="navhoe" src="resources/hoe.png" alt="">
+            <img class="navhoe" src="resources/hoe.png" alt="">
+            <img class="navhoe2" src="resources/roaring-angry-beast-blue-emoji-black.png" alt="">
         </div>
         <div class="content">
             <p>This is the main content area.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repudiandae totam at beatae ipsam vel! Praesentium, voluptate dolorum impedit repellendus vitae eum temporibus possimus ipsum, incidunt cumque sequi ratione ad voluptatum commodi eveniet quo consequatur earum libero facilis sit amet recusandae delectus. Rerum hic, nobis quasi aliquid, reiciendis tempora autem neque quia laudantium facilis voluptate molestiae repudiandae totam itaque incidunt sunt libero minima dolorem quaerat. Recusandae illum autem aliquam sed, ratione repudiandae fugit natus, consequatur vitae perspiciatis facilis molestias atque voluptates id omnis dolore impedit minus eos. Ipsum libero aperiam exercitationem ex! Sapiente voluptatibus officiis neque repudiandae eveniet nisi esse dolor eaque ipsam adipisci eligendi maiores commodi numquam, et ullam praesentium ut autem? Vel distinctio, officiis natus dolor optio quaerat debitis, minima aliquid rerum mollitia cumque modi est quos consectetur quibusdam repellendus dolorem obcaecati adipisci harum laudantium atque quod dignissimos. Autem tempore, odit in fugit temporibus tenetur magnam saepe similique modi quas corrupti maxime minus laboriosam neque libero ipsa error nisi accusantium maiores unde. Sed quidem exercitationem nisi nemo atque dolor veniam dicta eius velit quia voluptatibus fugit iusto ab est ut eos, eaque odit! Est aspernatur dicta culpa perspiciatis fuga assumenda odit quisquam tempora. Quo deleniti rem nulla quidem.</p>
-            <img class="image" src="hoe.png" alt="hoe">
+            <img class="image" src="resources/hoe.png" alt="hoe">
             <img
                 src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWtiaW5mOXB5cm42NTk2a3ZzbnlydWRyeWh1bnF2OXZjZTgxN3ZxMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/10YpWPBU7GAYwM/giphy.gif"
                 alt="GIF animation"
@@ -67,6 +82,37 @@
                 height="300"
                 class="gif"
             />
+            <img src="resources/emoji3.png" alt="" class="sigma">
+            <script>
+                (function () {
+                    const sigma = document.querySelector('.sigma');
+                    if (!sigma) return;
+
+                    // make element keyboard focusable for accessibility
+                    sigma.setAttribute('tabindex', '0');
+                    sigma.setAttribute('role', 'button');
+
+                    function go() {
+                    // change to the page you want
+                    window.location.href = 'pages/page2/Otherpage.html';
+                    }
+
+                    sigma.addEventListener('click', go);
+
+                    // allow Enter and Space to activate the "button"
+                    sigma.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                        e.preventDefault();
+                        go();
+                    }
+                    });
+                })();
+            </script>
+        </div>
+        <div class="footer">
+            <p>footer</p>
+            <br>
+            <img class="movehoe" src="resources/emoji1.png" alt="emoji">
         </div>
     </div>
 </body>

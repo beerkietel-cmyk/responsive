@@ -1,0 +1,58 @@
+body {
+    background-image: url("/resources/background.jpg");
+    background-size: cover;
+    cursor: url("/resources/cat-face-blue-emoji-blue.cur"), url("/resources/catface.png") 16 16, auto;
+}
+
+div {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 50px;
+    background-color: white;
+}
+
+.cursor-gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 96px;
+    /* adjust size as needed */
+    height: auto;
+    pointer-events: none;
+    /* don't block clicks */
+    transform: translate(-50%, -50%);
+    display: none;
+    /* show when movement starts */
+    z-index: 9999;
+    will-change: transform;
+    transition: opacity 120ms linear;
+}
+
+/* ...existing code... */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cursor-gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 96px;
+    /* adjust size as needed */
+    height: auto;
+    pointer-events: none;
+    /* don't block clicks */
+    transform: translate(-50%, -50%);
+    display: none;
+    /* show when movement starts */
+    z-index: 9999;
+    will-change: transform;
+    transition: opacity 120ms linear;
+}
