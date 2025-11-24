@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="resources/emoji2.png" />
+    <script src="/javathing/script.js"></script>
     <title>Hoofdpagina</title>
 </head>
 <body>
     <div class="grid-container">
         <div class="header">
-            <span class="epic" aria-label="epic">
+            <span class="headerr" aria-label="headerr">
                 <span class="letter">T</span>
                 <span class="letter">o</span>
                 <span class="letter">p</span>
@@ -24,17 +25,18 @@
             </span>
             <img src="resources/emoji2.png" alt="" width="50px">
         </div>
-        <div class="nav">
+        <div class="nav" id="siteNav" aria-label="Main navigation">
             <p>This is the navigation bar.</p>
             <br>
             <p>
                 <a class="linkmo" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a> |
                 <a class="linkmo" href="https://www.bing.com" target="_blank" rel="noopener noreferrer">Bing</a> |
                 <a class="linkmo" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">youtube</a> |
-                <a class="linkmo" href="/pages/page2/Otherpage.html" target="_blank" rel="noopener noreferrer">Otherpage</a> |
+                <a class="linkmo" href="/pages/page2/Otherpage.html">Otherpage</a> |
             </p>
         </div>
         <div class="menu">
+            <button id="navToggle" aria-expanded="true" aria-controls="siteNav">Menu</button>
             <ul>
                 <li>
                     <span class="menu" aria-label="menu">
@@ -95,7 +97,7 @@
 
                     function go() {
                     // change to the page you want
-                    window.location.href = 'pages/page2/Otherpage.html';
+                    window.URL = 'pages/page2/Otherpage.html';
                     }
 
                     sigma.addEventListener('click', go);
