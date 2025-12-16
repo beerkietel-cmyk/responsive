@@ -1,0 +1,147 @@
+body {
+    background-image: url("/resources/gamblecore.jpg");
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(165, 42, 42, 0);
+    height: 100%;
+}
+
+.bodier {
+    background-color: rgba(255, 255, 255, 0.459);
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%;
+
+}
+
+.spin {
+    position: fixed;
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: spin 3s linear infinite;
+}
+
+.following {
+    position: fixed;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 500px;
+    margin-left: 35%;
+    animation: distraction 10s ease-in-out infinite;
+    box-shadow: 0px 0px 100px rgb(253, 15, 86);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes distraction {
+    0% {
+        transform: translateX(3000px);
+    }
+
+    25% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-3000px);
+    }
+
+    75% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(3000px);
+    }
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    margin-top: 300px;
+}
+
+.decline {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    animation: sizing 2s linear infinite;
+}
+
+.accept {
+    position: fixed;
+    bottom: 20px;
+    left: 145px;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    animation: sizing 2s linear infinite;
+}
+
+@keyframes sizing {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+    font-weight: 700;
+    /* font-size: 18px; */
+    line-height: 1;
+    display: inline-block;
+    transform-origin: center;
+    /* moving (float) + rainbow background animation (two animations) */
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 3s linear var(--color-delay, 0s) infinite;
+    /* spin 5s linear var(--move-delay, 0s) infinite; */
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

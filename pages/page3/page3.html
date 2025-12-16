@@ -6,12 +6,11 @@
     <title>Gambling</title>
     <link rel="icon" type="image/x-icon" href="/resources/a5f.jpg" />
     <link rel="stylesheet" href="style.css">
-    <script src="/pages/page3/java/button.js"></script>
-    <script src="/pages/page3/java/chance.js"></script>
+    <script src="/pages/page3/java/gamble.js"></script>
 </head>
 <body>
     <img class="motivation" src="/resources/a5f.jpg" alt="">
-    <img class="motivation" src="/resources/gamblecore.jpg" alt="">
+    <img class="motivation" src="/resources/gamblecore.jpg" alt="" id="moneyiscalling">
     <img class="motivation" src="/resources/gambling.jpg" alt="">
     <div>
         <nav>
@@ -20,14 +19,15 @@
         <div class="content">
             <h1>gamble core</h1>
             <p>take your chance to get back or earn it.</p>
-            <p id="totalCash">$0</p>
-            <p id="cash">...</p>
+            <p id="totalCash">$1000</p>
+            <p class="rainbow" id="resultDisplay">...</p>   
+            <p id="amount">. . .</p>
+            <br>
             <button id="homepage">Buy your way back for $100k</button>
             <br>
-            <button id="buyluck">Buy luck ($25k)</button>
+            <button id="LuckButton">Buy more luck ($5k)</button>
             <br>
-            <p id="linkLuck">Link Luck: ...</p>
-            <img id="stone" src="/resources/stone.png" alt="" width="100px">
+            <button id="gambleButton">Gamble</button>
             <br>
             <img src="/resources/a5f.jpg" alt="follower" class="cursor-gif" aria-hidden="true">
 
@@ -64,6 +64,12 @@
                     requestAnimationFrame(animate);
                 })();
             </script>
+            <img src="/resources/ohnepixel.png" alt="" id="ohne" class="ohne">
+        </div>
+        <div>
+            <footer id="earnings">
+                <p>Last earnings:</p> <br>
+            </footer>
         </div>
     </div>
 </body>

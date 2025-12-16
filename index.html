@@ -32,7 +32,7 @@
                 <a class="linkmo" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a> |
                 <a class="linkmo" href="https://www.bing.com" target="_blank" rel="noopener noreferrer">Bing</a> |
                 <a class="linkmo" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">youtube</a> |
-                <a class="linkmo" href="/pages/page2/Otherpage.html">Otherpage</a> |
+                <a class="linkmo" href="/pages/page2/Otherpage.html">Otherpage</a> |    
             </p>
         </div>
         <div class="menu">
@@ -86,31 +86,6 @@
                 class="gif"
             />
             <img src="resources/emoji3.png" alt="" class="sigma">
-            <script>
-                (function () {
-                    const sigma = document.querySelector('.sigma');
-                    if (!sigma) return;
-
-                    // make element keyboard focusable for accessibility
-                    sigma.setAttribute('tabindex', '0');
-                    sigma.setAttribute('role', 'button');
-
-                    function go() {
-                    // change to the page you want
-                    window.URL = 'pages/page2/Otherpage.html';
-                    }
-
-                    sigma.addEventListener('click', go);
-
-                    // allow Enter and Space to activate the "button"
-                    sigma.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-                        e.preventDefault();
-                        go();
-                    }
-                    });
-                })();
-            </script>
         </div>
         <div class="footer">
             <p>footer</p>
