@@ -145,3 +145,33 @@ h1 {
         background-position: 0% 50%;
     }
 }
+
+.guy {
+    position: fixed;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    left: 1700px;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+.apple {
+    position: fixed;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    top: 600px;
+    left: 1700px;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+.gif {
+    position: fixed;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    top: 550px;
+    left: 50px;
+    animation: mover 10s ease-in-out infinite;
+    opacity: 0;
+}

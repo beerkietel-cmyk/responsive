@@ -1,0 +1,41 @@
+div {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+p {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    display: inline-block;
+    transform-origin: center;
+    /* moving (float) + rainbow background animation (two animations) */
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 3s linear var(--color-delay, 0s) infinite;
+    /* spin 5s linear var(--move-delay, 0s) infinite; */
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
